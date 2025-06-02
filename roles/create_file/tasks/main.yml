@@ -1,0 +1,7 @@
+---
+# tasks/main.yml
+- name: Create file using custom module
+  my_namespace.yandex_cloud_elk.my_own_module:
+    path: "{{ file_path }}"
+    content: "{{ file_content }}"
+

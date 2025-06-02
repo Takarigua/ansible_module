@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  roles:
+    - role: my_namespace.yandex_cloud_elk.create_file
+      vars:
+        file_path: "/tmp/custom_file.txt"
+        file_content: "Custom content"
+
