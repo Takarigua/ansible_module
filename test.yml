@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  collections:
+    - my_own_namespace.yandex_cloud_elk
+  tasks:
+    - name: Test module from collection
+      my_own_namespace.yandex_cloud_elk.my_own_module:
+        path: "/tmp/collection_test.txt"
+        content: "Test from installed collection"
+      register: result
+
+    - debug: var=result
